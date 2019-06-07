@@ -86,9 +86,3 @@ let humanPetrovPetr = new Human('Петров Петр', 21, '02.02.1997');
 console.log(humanPetrovPetr);
 
 console.log(humanPetrovPetr.displayInfo());
-
-
-
-
-
-
