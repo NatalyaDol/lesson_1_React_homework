@@ -48,6 +48,8 @@ function newFigureFunc() {
     let figureName = form.elements[0].value;
     let par1 = form.elements[1].value;
     let par2 = form.elements[2].value;
+    
+    console.log("Exercise #2");
 
     figure.calculateArea(figureName, par1, par2);
     // console.log(form.elements[0].value);

@@ -5,6 +5,7 @@
 
 function loop(times, callback) {
   let j = times;
+  console.log("Exercise #1");
   if (j < 1) {
     console.log("Time is 0");
   } else {

@@ -17,7 +17,7 @@
 //класса Employee написать: super.displayInfo(), это вызовет метод disaplyInfo класс Human и вернет строку с параметрами Human'a.
 
 'use strict';
-
+console.log("Exercise #3");
 class Human {
     constructor(name, age, dateOfBirth) {
         this.name = name;
