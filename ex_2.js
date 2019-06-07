@@ -35,14 +35,11 @@ class Figure {
         } else if (figure == "circle") {
             area = Math.pow(input[0], 2) * 3.1415;
             obj = { area, figure, input };
-
         } 
         console.log(obj);  
         // console.log(`Yours figure is ${figure} with the parameters ${input} and the area ${area}`);
-        areaFigure.innerText = `Ваша фигура ${figure} c параметрами ${input} и площадью ${area}`
-        
+        areaFigure.innerText = `Ваша фигура ${figure} c параметрами ${input} и площадью ${area}`  
     };
-   
 };
 
 //Запуск расчета площади по объекту по параметрам пользователя, после клика на кнопку "посчитать площадь фигуры"
