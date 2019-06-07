@@ -32,36 +32,31 @@ class Human {
 
 //Employee start
 class Employee extends Human {
-    constructor(salary, department) {
-        super();
+    constructor(name, age, dateOfBirth, salary, department) {
+        super(name, age, dateOfBirth);
         this.salary = salary;
         this.department = department;
     }
 
     displayInfo () {
-        return (super.displayInfo() + this.salary + ", " + this.department);
+        return (super.displayInfo() + ", " + this.salary + ", " + this.department);
     }
 };
 //Employee end
 
 //Manager start
 class Manager extends Employee {
-    constructor() {
-        super();
+    constructor(name, age, dateOfBirth, salary, department) {
+        super(name, age, dateOfBirth, salary, department);
         this.developers = [];
     }
 
-    addDeveloper(nameDevelop) {
-        let newDeveloper = nameDevelop;
-        let developers = this.developers
-        developers.push.newDeveloper;
+    addDeveloper(developer) {
+        this.developers.push(developer)
     }
 
-    deleteDeveloper(nameDevelop) {
-        let developer = nameDevelop;
-        let developers = this.developers;
-        
-        developers = developers.filter(n => n !== developer)
+    deleteDeveloper(developer) {
+       this.developers = this.developers.filter(n => n !== developer)
     }
 };
 //Manager end
@@ -82,7 +77,12 @@ class Developer extends Employee {
 
 
 
-let humanPetrovPetr = new Human('Петров Петр', 21, '02.02.1997');
+let humanPetrovPetr = new Manager('Петров Петр', 21, '02.02.1997', 10000, 'IT');
 console.log(humanPetrovPetr);
 
 console.log(humanPetrovPetr.displayInfo());
+
+let vasya = new Developer('Vasya', 22, '02.02.1999', 5000, 'IT');
+humanPetrovPetr.addDeveloper(vasya)
+
+console.log(humanPetrovPetr.developers);
