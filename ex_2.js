@@ -8,7 +8,6 @@
 //     input - входные параметры, по которым было произведено вычисление.
 
 'use strict';
-
 var form = document.querySelector("form"); // доступ к форме
 var areaFigure = document.getElementById("area_figure");// поле для вывода текста с информацией о площади
 
@@ -18,7 +17,6 @@ class Figure {
         this.par1 = par1;
         this.par2 = par2;
     }
-
     calculateArea(figure, par1, par2) { 
         let input = [par1, par2];
         let area;
@@ -41,7 +39,6 @@ class Figure {
         areaFigure.innerText = `Ваша фигура ${figure} c параметрами ${input} и площадью ${area}`  
     };
 };
-
 //Запуск расчета площади по объекту по параметрам пользователя, после клика на кнопку "посчитать площадь фигуры"
 function newFigureFunc() {
     var figure = new Figure;
@@ -50,9 +47,20 @@ function newFigureFunc() {
     let par2 = form.elements[2].value;
     
     console.log("Exercise #2");
-
     figure.calculateArea(figureName, par1, par2);
     // console.log(form.elements[0].value);
     // console.log(form.elements[1].value);
     // console.log(form.elements[2].value);
 };
+
+//version by teacher
+function calculateArea(...input) {
+    console.log("Exercise #2 teachers version");
+    
+    const [side1, side2] = input;
+    const area = side1 * side2;
+    const figure = 'прямоугольник';
+
+    return { area, figure, input };
+}
+console.log(calculateArea(2, 4));
